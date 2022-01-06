@@ -1,10 +1,10 @@
 import React from "react";
-import { Container, Text } from "./styles";
+import { Container, Title } from "./styles";
 
 export function Dashboard() {
   return (
     <Container>
-      <Text>DashBoard</Text>
+      <Title>DashBoard</Title>
     </Container>
   );
 }
