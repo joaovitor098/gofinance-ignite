@@ -10,7 +10,7 @@ import {
   Poppins_700Bold,
 } from "@expo-google-fonts/poppins";
 
-import { Dashboard } from "./src/screen/Dashboard";
+import { Register } from "./src/screen/Register";
 
 export default function App() {
   const [fonstLoaded] = useFonts({
@@ -25,7 +25,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Dashboard />
+      <Register />
       <StatusBar style="auto" />
     </ThemeProvider>
   );
