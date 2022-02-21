@@ -1,14 +1,16 @@
-export type CategorySelectProps = {
+import { TouchableOpacityProps } from "react-native";
+
+export type CategorySelectButtonProps = TouchableOpacityProps & {
   title: string;
 };
 
 export type CategorySelectScreenProps = {
-  category: string;
-  setCategory: (category: Category) => void;
+  category: CategoryProps;
+  setCategory: (category: CategoryProps) => void;
   closeSelectCategory: () => void;
 };
 
-type Category = {
+export type CategoryProps = {
   key: string;
   name: string;
 };

@@ -1,11 +1,14 @@
 import { View, Text } from "react-native";
 import React from "react";
 import { Container, Category, Icon } from "./styles";
-import { CategorySelectProps } from "../../../@types";
+import { CategorySelectButtonProps } from "../../../@types";
 
-export default function CategorySelect({ title }: CategorySelectProps) {
+export default function CategorySelectButton({
+  title,
+  ...rest
+}: CategorySelectButtonProps) {
   return (
-    <Container>
+    <Container {...rest}>
       <Category>{title}</Category>
       <Icon name="chevron-down" />
     </Container>
