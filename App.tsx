@@ -1,6 +1,8 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { ThemeProvider } from "styled-components";
+import "react-native-gesture-handler";
+
 import theme from "./src/global/styles/theme";
 import AppLoading from "expo-app-loading";
 import {
@@ -10,7 +12,9 @@ import {
   Poppins_700Bold,
 } from "@expo-google-fonts/poppins";
 
-import { Register } from "./src/screen/Register";
+import { NavigationContainer } from "@react-navigation/native";
+import AppRoutes from "./src/routes/app.routes";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 export default function App() {
   const [fonstLoaded] = useFonts({
@@ -25,7 +29,11 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Register />
+      <NavigationContainer>
+        <GestureHandlerRootView style={{ flex: 1 }}>
+          <AppRoutes />
+        </GestureHandlerRootView>
+      </NavigationContainer>
       <StatusBar style="auto" />
     </ThemeProvider>
   );

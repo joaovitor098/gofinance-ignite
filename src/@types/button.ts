@@ -1,10 +1,11 @@
-import { TouchableOpacityProps } from "react-native";
+import { RectButtonProps } from "react-native-gesture-handler";
 
-export type ButtonProps = TouchableOpacityProps & {
+export type ButtonProps = Omit<RectButtonProps, "onPress"> & {
   title: string;
+  onPress: () => void;
 };
 
-export type TransactionButtonProps = TouchableOpacityProps & {
+export type TransactionButtonProps = RectButtonProps & {
   title: string;
   type: "up" | "down";
   isActie: boolean;

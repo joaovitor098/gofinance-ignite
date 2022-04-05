@@ -1,4 +1,5 @@
 import React from "react";
+import { Alert } from "react-native";
 import { DataTransactionCardProps } from "../../@types";
 import HighlightCard from "../../components/HighlightCard";
 import TransactionCard from "../../components/TransactionCard";
@@ -12,6 +13,7 @@ import {
   User,
   UserGreeting,
   UserName,
+  LogoutButton,
   Icon,
   HighlightCards,
   Transactions,
@@ -67,7 +69,9 @@ export function Dashboard() {
               <UserName>João Vítor</UserName>
             </User>
           </UserInfo>
-          <Icon name="power" />
+          <LogoutButton onPress={() => Alert.alert("Logout")}>
+            <Icon name="power" />
+          </LogoutButton>
         </UserWrapper>
       </Header>
       <HighlightCards>

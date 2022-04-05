@@ -1,11 +1,10 @@
-import { View, Text } from "react-native";
 import React from "react";
 import { Container, Title } from "./styles";
 import { ButtonProps } from "../../../@types";
 
-export default function Button({ title, ...rest }: ButtonProps) {
+export default function Button({ title, onPress, ...rest }: ButtonProps) {
   return (
-    <Container {...rest}>
+    <Container onPress={onPress} {...rest}>
       <Title>{title}</Title>
     </Container>
   );

@@ -1,6 +1,5 @@
-import { View, Text } from "react-native";
 import React from "react";
-import { Container, Title, Icon } from "./styles";
+import { Container, Title, Icon, Button } from "./styles";
 import { TransactionButtonProps } from "../../../@types";
 
 const icons = {
@@ -15,9 +14,11 @@ export default function TransactionTypeButton({
   ...rest
 }: TransactionButtonProps) {
   return (
-    <Container isActive={isActie} type={type} {...rest}>
-      <Icon name={icons[type]} type={type} />
-      <Title>{title}</Title>
+    <Container isActive={isActie} type={type}>
+      <Button {...rest}>
+        <Icon name={icons[type]} type={type} />
+        <Title>{title}</Title>
+      </Button>
     </Container>
   );
 }
